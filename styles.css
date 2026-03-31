@@ -1251,7 +1251,7 @@ h1 span {
   line-height: 1.75;
 }
 
-/* ── Why Vithula grid ─────────────────────────────────── */
+/* ── Why Vidula grid ─────────────────────────────────── */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1375,7 +1375,7 @@ h1 span {
     grid-template-columns: 1fr;
   }
 }
-/* ── End Why Vithula ──────────────────────────────────── */
+/* ── End Why Vidula ──────────────────────────────────── */
 
 @keyframes riseIn {
   from {
