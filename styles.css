@@ -1858,3 +1858,75 @@ h1 span {
   }
 }
 
+/* ── Map Wrapper ─────────────────────────────── */
+.map-wrap {
+  width: 100%;
+  margin-top: 3rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--surface-shadow);
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.map-wrap iframe {
+  display: block;
+  width: 100%;
+  border-radius: 1.6rem;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.map-wrap:hover iframe {
+  transform: scale(1.02);
+}
+
+/* ── Contact Grid Fixes ─────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Testimonials Track Fixes ─────────────────────────────── */
+.testimonials-track-wrap {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  padding: 1rem 0;
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: reviewScroll 40s linear infinite;
+  will-change: transform;
+}
+
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes reviewScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 1rem)); /* Shifts by exactly half the content plus half a gap to perfectly loop */
+  }
+}
