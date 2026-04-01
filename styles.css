@@ -546,6 +546,14 @@ h1 span {
   color: var(--ink);
 }
 
+.section-intro {
+  max-width: 62ch;
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -615,9 +623,21 @@ h1 span {
 
 .form-submit {
   width: 100%;
-  margin-top: 0.5rem;
   border: none;
   cursor: pointer;
+}
+
+.form-actions {
+  display: grid;
+  gap: 1.1rem;
+  margin-top: 0.85rem;
+}
+
+.form-call {
+  width: 100%;
+  color: #03111f;
+  border: none;
+  text-decoration: none;
 }
 
 .feature-panel {
