@@ -3,7 +3,7 @@
 }
 
 .service-body {
-  background: linear-gradient(180deg, #eef5ff 0%, #ffffff 42%, #f6fbff 100%);
+  background: var(--surface);
   color: var(--ink);
 }
 
@@ -138,7 +138,7 @@
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 2rem;
-  background: linear-gradient(180deg, #ffffff 0%, #eef7ff 100%);
+  background: var(--surface-elevated);
   box-shadow: var(--surface-shadow);
   min-height: 430px;
 }
@@ -168,7 +168,7 @@
 .service-related-card {
   border: 1px solid var(--line);
   border-radius: 1.7rem;
-  background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);
+  background: var(--surface-elevated);
   box-shadow: var(--surface-shadow);
 }
 

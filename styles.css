@@ -7,14 +7,16 @@
   --soft: rgba(214, 232, 247, 0.72);
   --accent: #86d6ff;
   --accent-deep: #2e8fff;
-  --highlight: #ffffff;
+  --highlight: #f8fcff;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
-  --surface: #ffffff;
-  --surface-soft: #f4f9ff;
+  --surface: #eaf3f9;
+  --surface-soft: #f4f9fd;
+  --surface-strong: #e2edf6;
+  --surface-elevated: #f8fbfe;
   --ink: #0f2f57;
   --ink-soft: #4e6b8d;
-  --line: rgba(46, 143, 255, 0.12);
-  --surface-shadow: 0 24px 70px rgba(13, 44, 83, 0.08);
+  --line: rgba(46, 143, 255, 0.14);
+  --surface-shadow: 0 24px 70px rgba(13, 44, 83, 0.09);
 }
 
 * {
@@ -514,8 +516,7 @@ h1 span {
   display: grid;
   gap: 2rem;
   padding: 4.5rem clamp(1.25rem, 4vw, 3.5rem) 5rem;
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  background: var(--surface-strong);
   color: var(--ink);
 }
 
@@ -564,7 +565,7 @@ h1 span {
   padding: 1.5rem;
   border: 1px solid var(--line);
   border-radius: 1.6rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+  background: var(--surface-elevated);
   box-shadow: var(--surface-shadow);
 }
 
@@ -574,7 +575,7 @@ h1 span {
 .booking-card {
   border: 1px solid var(--line);
   border-radius: 1.6rem;
-  background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);
+  background: var(--surface-elevated);
   box-shadow: var(--surface-shadow);
   padding: 2.5rem;
 }
@@ -607,7 +608,7 @@ h1 span {
   padding: 0.85rem 1.1rem;
   border-radius: 0.8rem;
   border: 1px solid rgba(46, 143, 255, 0.2);
-  background: #ffffff;
+  background: var(--surface-elevated);
   color: var(--ink);
   font-family: inherit;
   font-size: 1rem;
@@ -688,7 +689,7 @@ h1 span {
   width: min(400px, 100%);
   border: 1px solid var(--line);
   border-radius: 2rem;
-  background: #ffffff;
+  background: var(--surface-elevated);
   box-shadow: 0 24px 64px rgba(13, 44, 83, 0.1);
   overflow: hidden;
   transition: transform 300ms ease, box-shadow 300ms ease;
@@ -815,7 +816,7 @@ h1 span {
   grid-template-columns: 1fr 1fr;
   border: 1px solid var(--line);
   border-radius: 2rem;
-  background: linear-gradient(160deg, #ffffff 0%, #f4f9ff 100%);
+  background: var(--surface-elevated);
   box-shadow: var(--surface-shadow);
   overflow: hidden;
   transition: box-shadow 300ms ease, transform 300ms ease;
@@ -1128,7 +1129,7 @@ h1 span {
 .review-card {
   width: 340px;
   flex-shrink: 0;
-  background: #ffffff;
+  background: var(--surface-elevated);
   border: 1px solid var(--line);
   box-shadow: var(--surface-shadow);
   border-radius: 16px;
@@ -1249,6 +1250,7 @@ h1 span {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 1.6rem;
+  background: var(--surface-elevated);
   box-shadow: var(--surface-shadow);
   line-height: 0;         /* removes gap below iframe */
 }
@@ -1293,7 +1295,7 @@ h1 span {
   padding: 2rem 1.6rem 1.8rem;
   border: 1px solid var(--line);
   border-radius: 1.8rem;
-  background: linear-gradient(160deg, #ffffff 0%, #f4f9ff 100%);
+  background: var(--surface-elevated);
   box-shadow: var(--surface-shadow);
   overflow: hidden;
   transition: transform 280ms ease, box-shadow 280ms ease;

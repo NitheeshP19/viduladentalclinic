@@ -1,0 +1,2 @@
+# Static HTML/CSS site.
+# No Python dependencies are required for this project right now.

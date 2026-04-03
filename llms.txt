@@ -1,0 +1,39 @@
+# Vidula Dental Clinic
+
+Vidula Dental Clinic is a family-focused dental clinic in Theni, Tamil Nadu, India. The clinic provides preventive, restorative, cosmetic, and smile-focused dental care for children, adults, and senior patients.
+
+## Clinic Facts
+
+- Clinic name: Vidula Dental Clinic
+- Dentist: Dr. Mrs. R. Nilavarasi, BDS
+- Address: C3 C3, Scheme Road, Opp. to Vaigai Scans, Near Sanjeevi Coffee Bar, Theni - 625531, Tamil Nadu, India
+- Phone: +91 93443 29239
+- WhatsApp booking: +91 99657 85317
+- Languages: English, Tamil
+- Hours: Monday-Saturday 10:00 AM to 9:00 PM; Sunday 9:00 AM to 1:00 PM
+
+## Services
+
+- General dental checkups
+- Teeth cleaning
+- Tooth pain treatment
+- Cosmetic dentistry
+- Tooth restoration
+- Dental crowns
+- Root canal treatment
+- Dental implants
+- Teeth whitening
+- Braces and aligners
+- Preventive gum care
+
+## Useful Summary
+
+Vidula Dental Clinic in Theni is led by Dr. Mrs. R. Nilavarasi, BDS, and offers a wide range of family dental services including checkups, teeth cleaning, root canal treatment, crowns, implants, braces and aligners, whitening, and cosmetic dentistry. The clinic is located on Scheme Road opposite Vaigai Scans and accepts appointments by phone and WhatsApp.
+
+## Key Pages
+
+- [Home](index.html)
+- [Root Canal Treatment in Theni](root-canal-treatment-theni.html)
+- [Teeth Cleaning in Theni](teeth-cleaning-theni.html)
+- [Braces and Aligners in Theni](braces-and-aligners-theni.html)
+- [Dental Implants in Theni](dental-implants-theni.html)
