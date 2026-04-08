@@ -150,6 +150,39 @@
   object-fit: cover;
 }
 
+.service-stock-showcase {
+  padding-top: 0.5rem;
+}
+
+.service-stock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-stock-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--surface-elevated);
+  box-shadow: var(--surface-shadow);
+}
+
+.service-stock-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-stock-card figcaption {
+  padding: 0.9rem 1rem 1rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .service-section {
   width: min(1280px, 100%);
   margin: 0 auto;
@@ -310,6 +343,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .service-stock-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .service-faq-grid,
   .service-related-grid {
     grid-template-columns: 1fr;
@@ -342,6 +379,10 @@
   }
 
   .service-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-stock-grid {
     grid-template-columns: 1fr;
   }
 
