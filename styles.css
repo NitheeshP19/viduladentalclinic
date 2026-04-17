@@ -137,13 +137,32 @@ a {
   width: 3.35rem;
   height: 3.35rem;
   padding: 0.9rem;
-  border: 1px solid rgba(165, 220, 255, 0.24);
+  border: 1px solid rgba(222, 243, 255, 0.26);
   border-radius: 1.1rem;
-  background: linear-gradient(135deg, rgba(98, 168, 255, 0.14), rgba(255, 255, 255, 0.08));
-  box-shadow: 0 14px 34px rgba(18, 63, 112, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06)),
+    linear-gradient(135deg, rgba(116, 187, 255, 0.14), rgba(9, 32, 58, 0.18));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 16px 34px rgba(18, 63, 112, 0.18);
   place-content: center;
   cursor: pointer;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+.menu-toggle:hover {
+  transform: translateY(-2px);
+  border-color: rgba(233, 248, 255, 0.34);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08)),
+    linear-gradient(135deg, rgba(132, 198, 255, 0.18), rgba(9, 32, 58, 0.2));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 40px rgba(18, 63, 112, 0.22);
 }
 
 .menu-toggle span {
@@ -257,26 +276,44 @@ a {
 }
 
 .header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   justify-self: center;
-  padding: 0.95rem 1.25rem;
-  border: 1px solid rgba(165, 220, 255, 0.24);
+  width: min(100%, 21rem);
+  min-height: 3.35rem;
+  padding: 0.95rem 1.85rem;
+  border: 1px solid rgba(137, 194, 255, 0.24);
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(98, 168, 255, 0.22), rgba(255, 255, 255, 0.14));
-  backdrop-filter: blur(16px);
-  font-size: 0.85rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    linear-gradient(180deg, rgba(46, 104, 168, 0.92), rgba(35, 86, 145, 0.94));
+  color: #ffffff;
+  font-size: 0.92rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   white-space: nowrap;
   text-transform: uppercase;
-  box-shadow: 0 14px 34px rgba(18, 63, 112, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03),
+    0 18px 36px rgba(10, 35, 68, 0.28);
+  backdrop-filter: blur(18px) saturate(145%);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
   transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
 .header-cta:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, rgba(134, 214, 255, 0.28), rgba(255, 255, 255, 0.18));
-  border-color: rgba(134, 214, 255, 0.48);
-  box-shadow: 0 18px 40px rgba(18, 63, 112, 0.26);
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
+    linear-gradient(180deg, rgba(52, 114, 182, 0.96), rgba(39, 93, 156, 0.98));
+  border-color: rgba(154, 207, 255, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 40px rgba(10, 35, 68, 0.32);
 }
 
 .hero-content {
@@ -357,33 +394,26 @@ h1 span {
 }
 
 .button-primary {
-  color: #03111f;
-  background: linear-gradient(135deg, var(--accent-deep), #f7fcff);
+  color: #f8fcff;
+  background: var(--accent-deep);
   box-shadow: 0 18px 38px rgba(46, 143, 255, 0.3);
 }
 
 .button-primary:hover {
+  background: #1f7fe8;
   box-shadow: 0 20px 48px rgba(46, 143, 255, 0.38);
 }
 
 .button-secondary {
-  border: 1px solid rgba(165, 220, 255, 0.28);
-  background: rgba(117, 174, 255, 0.08);
-  backdrop-filter: blur(14px);
+  color: #f8fcff;
+  border: 1px solid transparent;
+  background: var(--accent-deep);
+  box-shadow: 0 18px 38px rgba(46, 143, 255, 0.3);
 }
 
-.button-secondary::after {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: linear-gradient(120deg, transparent 10%, rgba(255, 255, 255, 0.3), rgba(134, 214, 255, 0.24), transparent 70%);
-  transform: translateX(-140%);
-  transition: transform 420ms ease;
-}
-
-.button-secondary:hover::after {
-  transform: translateX(140%);
+.button-secondary:hover {
+  background: #1f7fe8;
+  box-shadow: 0 20px 48px rgba(46, 143, 255, 0.38);
 }
 
 .wave-banner {
@@ -642,7 +672,7 @@ h1 span {
 
 .form-call {
   width: 100%;
-  color: #03111f;
+  color: #f8fcff;
   border: none;
   text-decoration: none;
 }
@@ -1232,6 +1262,29 @@ h1 span {
   height: 100%;
 }
 
+.contact-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.contact-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 999px;
+  background: rgba(46, 143, 255, 0.1);
+  color: #2e8fff;
+  flex-shrink: 0;
+}
+
+.contact-card-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
 /* Clinic hours list */
 .hours-list {
   margin: 0.2rem 0 0;
@@ -1688,10 +1741,10 @@ h1 span {
   gap: 0.4rem;
   align-self: flex-start;
   padding: 0.75rem 1.4rem;
-  border: 1px solid rgba(134, 214, 255, 0.3);
+  border: 1px solid transparent;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(46, 143, 255, 0.2), rgba(134, 214, 255, 0.12));
-  color: var(--accent);
+  background: var(--accent-deep);
+  color: #f8fcff;
   font-size: 0.83rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1700,10 +1753,10 @@ h1 span {
 }
 
 .footer-cta:hover {
-  background: linear-gradient(135deg, rgba(46, 143, 255, 0.32), rgba(134, 214, 255, 0.22));
-  border-color: rgba(134, 214, 255, 0.55);
+  background: #1f7fe8;
+  border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(46, 143, 255, 0.2);
+  box-shadow: 0 12px 30px rgba(46, 143, 255, 0.28);
 }
 
 /* Quick links column */
@@ -2012,9 +2065,22 @@ h1 span {
   }
 }
 
-/* Claymorphism FAQ slider */
+/* Premium FAQ slider */
 .faq-section {
+  position: relative;
   padding-top: clamp(3.8rem, 7vw, 6rem);
+}
+
+.faq-section::before {
+  content: "";
+  position: absolute;
+  inset: 5rem 0 auto;
+  height: 22rem;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(84, 193, 255, 0.18), transparent 24%),
+    radial-gradient(circle at 82% 30%, rgba(61, 218, 180, 0.12), transparent 24%),
+    radial-gradient(circle at 50% 90%, rgba(46, 143, 255, 0.12), transparent 28%);
+  pointer-events: none;
 }
 
 .faq-section .section-copy h2 {
@@ -2025,44 +2091,52 @@ h1 span {
 
 .faq-slider-shell {
   position: relative;
-  margin-top: 2rem;
-  border-radius: 2.2rem;
-  padding: 1.2rem 0;
+  margin-top: 2.15rem;
+  border-radius: 2.6rem;
+  padding: 1.35rem 0 1.55rem;
   overflow: hidden;
-  background: linear-gradient(145deg, #dceaf6 0%, #f6fbff 100%);
-  border: 1px solid rgba(112, 163, 214, 0.2);
+  background:
+    linear-gradient(180deg, rgba(161, 227, 243, 0.22) 0%, rgba(30, 97, 179, 0.1) 12%, rgba(26, 84, 151, 0.08) 100%),
+    linear-gradient(135deg, #66b1d2 0%, #2f78bd 38%, #2257ad 62%, #4ca7aa 100%);
+  border: 1px solid rgba(179, 233, 255, 0.26);
   box-shadow:
-    inset 12px 12px 24px rgba(170, 196, 221, 0.32),
-    inset -12px -12px 24px rgba(255, 255, 255, 0.82),
-    0 28px 70px rgba(13, 44, 83, 0.12);
+    inset 0 1px 0 rgba(255, 255, 255, 0.32),
+    0 32px 80px rgba(17, 57, 110, 0.18);
 }
 
 .faq-slider-shell::before,
 .faq-slider-shell::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 6rem;
-  z-index: 3;
+  left: -4%;
+  right: -4%;
+  border-radius: 50%;
   pointer-events: none;
 }
 
 .faq-slider-shell::before {
-  left: 0;
-  background: linear-gradient(90deg, rgba(235, 245, 253, 0.96) 0%, rgba(235, 245, 253, 0) 100%);
+  top: -7.4rem;
+  height: 11rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08));
+  opacity: 0.85;
 }
 
 .faq-slider-shell::after {
-  right: 0;
-  background: linear-gradient(270deg, rgba(235, 245, 253, 0.96) 0%, rgba(235, 245, 253, 0) 100%);
+  bottom: -7rem;
+  height: 12rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  opacity: 0.56;
 }
 
 .faq-slider-rail {
+  position: relative;
+  z-index: 2;
   display: flex;
   width: max-content;
-  gap: 1.4rem;
-  animation: faqClaySlide 58s linear infinite;
+  gap: 1.25rem;
+  animation: faqPremiumSlide 54s linear infinite;
   will-change: transform;
 }
 
@@ -2073,105 +2147,120 @@ h1 span {
 
 .faq-slider-track {
   display: flex;
-  gap: 1.4rem;
+  gap: 1.25rem;
   flex-shrink: 0;
-  padding-inline: 1.1rem;
+  padding-inline: 1.25rem;
 }
 
 .faq-card {
-  width: min(84vw, 460px);
-  min-height: 285px;
+  position: relative;
+  width: min(82vw, 430px);
+  min-height: 290px;
   border-radius: 2rem;
-  padding: 2rem 1.85rem;
+  padding: 2rem 1.75rem;
   background:
-    radial-gradient(circle at 16% 14%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.45) 36%, rgba(255, 255, 255, 0) 60%),
-    linear-gradient(150deg, #f6fbff 0%, #deecf8 100%);
-  border: 1px solid rgba(111, 163, 214, 0.22);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.34), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.11));
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow:
-    14px 14px 30px rgba(148, 180, 210, 0.35),
-    -14px -14px 30px rgba(255, 255, 255, 0.94),
-    inset 1px 1px 0 rgba(255, 255, 255, 0.92),
-    inset -1px -1px 0 rgba(142, 177, 210, 0.22);
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 22px 44px rgba(10, 37, 78, 0.22);
+  backdrop-filter: blur(18px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 1rem;
-  transition: transform 300ms ease, box-shadow 300ms ease;
+  transition: transform 320ms ease, box-shadow 320ms ease, background 320ms ease;
+}
+
+.faq-card::before {
+  content: "FAQ";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.35rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(250, 253, 255, 0.82);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .faq-card:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-6px);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.4), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.14));
   box-shadow:
-    18px 18px 34px rgba(139, 173, 206, 0.38),
-    -16px -16px 30px rgba(255, 255, 255, 0.98),
-    inset 1px 1px 0 rgba(255, 255, 255, 0.95),
-    inset -1px -1px 0 rgba(125, 162, 197, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 28px 56px rgba(9, 34, 72, 0.28);
 }
 
 .faq-card h3 {
   margin: 0;
-  color: #10345f;
+  color: #f8fcff;
   font-family: "Sora", sans-serif;
   font-size: 1.34rem;
-  line-height: 1.32;
+  line-height: 1.34;
 }
 
 .faq-card p {
   margin: 0;
-  color: #46678b;
-  font-size: 1.02rem;
-  line-height: 1.85;
+  color: rgba(239, 248, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-@keyframes faqClaySlide {
+@keyframes faqPremiumSlide {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(calc(-50% - 0.7rem));
+    transform: translateX(calc(-50% - 0.625rem));
   }
 }
 
 @media (max-width: 900px) {
   .faq-slider-shell {
-    padding: 0.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    border-radius: 2rem;
+    padding: 1rem 0 1.2rem;
   }
 
-  .faq-slider-shell::before,
+  .faq-slider-shell::before {
+    top: -5.6rem;
+    height: 8rem;
+  }
+
   .faq-slider-shell::after {
-    display: none;
+    bottom: -5.2rem;
+    height: 8.5rem;
   }
 
   .faq-slider-rail {
-    animation: none;
-    gap: 0.8rem;
-  }
-
-  .faq-slider-track[aria-hidden="true"] {
-    display: none;
+    gap: 0.9rem;
+    animation-duration: 40s;
   }
 
   .faq-slider-track {
-    gap: 0.8rem;
-    padding-inline: 0;
+    gap: 0.9rem;
+    padding-inline: 1rem;
   }
 
   .faq-card {
-    width: min(88vw, 360px);
-    min-height: 265px;
-    padding: 1.6rem 1.35rem;
-    scroll-snap-align: start;
+    width: min(84vw, 320px);
+    min-height: 250px;
+    padding: 1.5rem 1.2rem;
   }
 
   .faq-card h3 {
-    font-size: 1.16rem;
+    font-size: 1.08rem;
   }
 
-.faq-card p {
-    font-size: 0.97rem;
-    line-height: 1.72;
+  .faq-card p {
+    font-size: 0.93rem;
+    line-height: 1.68;
   }
 }
